@@ -1,17 +1,17 @@
 extends layout
 
 block content
-  h2=titreUD
-  form(method='POST', action='/users/?_method=DELETE')
-    input(type='number', name='sess')
+  form(method='POST', action='/delete/' + supp + '?_method=DELETE')
+    p coucou #{supp}
+    input(type='number', name='supp')
     p
     input(type='submit', value='Supprimer')
   br
   a(href='/') home
   br
-  a(href='/users/update') update
+  a(href='/update') update
   br
-  a(href='/users/delete') delete
+  a(href='/delete') delete
   br
   a(href='/session-in') session-in
   br

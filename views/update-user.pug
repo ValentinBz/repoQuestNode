@@ -1,9 +1,7 @@
 extends layout
 
 block content
-  h2=titreUD
-
-  form(method='POST', action='/users/?_method=PUT')
+  form(method='POST', action='/update/' + name + '?_method=PUT')
     input(type='text', name='prenom')
     p
     input(type='submit', value='Ajouter')
@@ -11,9 +9,9 @@ block content
   br
   a(href='/') home
   br
-  a(href='/users/update') update
+  a(href='/update') update
   br
-  a(href='/users/delete') delete
+  a(href='/delete') delete
   br
   a(href='/session-in') session-in
   br
