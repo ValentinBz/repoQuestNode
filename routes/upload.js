@@ -10,12 +10,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', upload.array('monfichier', 2), function (req, res, next) {
-	req.files.push("coucou");
-	console.log("req.file : ", req.file);
-	console.log("req.files : ", req.files);
-	console.log(req.files.file);
 	for (let i = 0; i < 2; i++) {
-		fs.rename(req.files.file.path, 'public/images/' + req.files.originalname, function(err){
+		fs.rename(req.files[i].path, 'public/images/' + req.files.originalname, function(err){
 	    if (err) {
 	        console.log('problème durant le déplacement'); 
 	    } else {
