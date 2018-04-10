@@ -12,6 +12,7 @@ var usersRouter = require('./routes/users');
 var Update = require('./routes/update');
 var Delete = require('./routes/delete');
 var upload = require('./routes/upload');
+var Mail = require('./routes/mail');
 
 var app = express();
 
@@ -42,6 +43,7 @@ app.use('/users', usersRouter);
 app.use('/update', Update);
 app.use('/delete', Delete);
 app.use('/upload', upload);
+app.use('/mail', Mail);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
