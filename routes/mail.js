@@ -7,8 +7,8 @@ var smtpTransport = nodemailer.createTransport({
     host: "smtp-relay.gmail.com",
     port: 587,
     auth: {
-        user: 'valentin.bouzin24@gmail.com',
-        pass: '8um43frtghqzy7'
+        user: 'toto@plop.com',
+        pass: 'kikoudu01'
     }
 });
 
